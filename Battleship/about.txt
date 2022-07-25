@@ -1,0 +1,10 @@
+
+BATTLESHIP GAME
+The objective of this game is to sink the opponent's ship. The user will play against the computer.
+
+To play the game, first the user must sign up. After that, they must successfully log in to their account.
+After login, the user can choose to start a new match.
+The game will show a 4x4 grid, and the user must choose a place in the opponent's grid by typing its line letter and column number (i.e. A1)
+If the user has missed the ship, they'll get a WATER message. If they hit the ship, they've won the game.
+The score will be calculated according to the number of turns the user has taken. Maximum point to be obtained in a match is 100.
+After the user's turn, it will be the computer's turn. If the user's ship is found, the match will end and the user will get 0 points.

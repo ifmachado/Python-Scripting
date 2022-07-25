@@ -1,0 +1,35 @@
+
+This script was automated using Crontab and will run every 12 hours.
+
+To automate using Crontab:
+1) Open terminal and type crontab -e, which will open VIM.
+2) Type I to insert a new cronjob.
+3) Type the following cron command, such as this:
+
+00 */12 * * * /Users/ingridmachado/Documents/ComputerScienceCourse/Scripting/pythonProject2/Assignment2/temp_recorder.py >> ~/cron.out 2>&1
+
+Breaking down the command:
+    - 00 */12 * * * is the time and frequency for the schedule in format (minutes, hour, day, month, week).
+    * is a symbol for any value and / is the step symbol.
+    - path and script to run: /Users/ingridmachado/Documents/ComputerScienceCourse/Scripting/pythonProject2/Assignment2/temp_recorder.py
+    - ">>" will save in the specified file the output from the script.
+    - ~/cron.out is the log file, which I used to check if the job was running correctly.
+    - "2>&1"  redirects Channel 2 (Standard Error) and Channel 1 (Standard Output) to the same place, which will be the log file.
+
+4) Pressed esc to exit editing mode.
+5) Typed :wq to save ( w - write) and exit ( q - quit) the VIM.
+6) Terminal should display the following message: crontab: installing new crontab
+
+To check the log file:
+
+1) Open terminal
+2) Type cat ~/cron.out
+
+GENERAL COMMENTS:
+Computer must be on for automation to work.
+
+I added the path (below) for the python 3 interpreter at the top of the file, to make this py file an executable,
+so I could use the standard path as the command, instead of the usual python3 file.py command.
+# !/Library/Frameworks/Python.framework/Versions/3.10/bin/python3
+
+Due to a few glitches encountered I had to hardcode the paths for database and svg chart.
